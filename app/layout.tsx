@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Inter, Orbitron, Rajdhani } from "next/font/google";
+import { Inter, Orbitron, Oxanium, Rajdhani } from "next/font/google";
 import "./globals.css";
+
+const oxanium = Oxanium({
+  variable: "--font-oxanium",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
 
 const rajdhani = Rajdhani({
   variable: "--font-rajdhani",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${rajdhani.variable} ${inter.variable} ${orbitron.variable}`}>
+    <html lang="en" className={`${oxanium.variable} ${rajdhani.variable} ${inter.variable} ${orbitron.variable}`}>
       <body>{children}</body>
     </html>
   );
