@@ -1,3 +1,5 @@
+import { ArrowUpRight, CircleHelp, Plus } from "lucide-react";
+
 const principles = [
   {
     number: "01",
@@ -116,7 +118,7 @@ export default function Home() {
               discipline, and the pursuit of excellence. We&apos;re building something bigger than the game.
             </p>
             <div className="button-row">
-              <a className="button button--solid" href="#about">DISCOVER BREAKLINE <span>↗</span></a>
+              <a className="button button--solid" href="#about">DISCOVER BREAKLINE <ArrowUpRight aria-hidden="true" /></a>
               <a className="button button--outline" href="#contact">JOIN THE MOVEMENT</a>
             </div>
           </div>
@@ -166,7 +168,7 @@ export default function Home() {
             <p>Our competitive divisions will be the foundation of BREAKLINE&apos;s esports ambitions.</p>
           </div>
           <div className="division-card reveal">
-            <div className="division-card__art"><span>?</span><i /></div>
+            <div className="division-card__art"><CircleHelp aria-hidden="true" /><i /></div>
             <div className="division-card__content">
               <span className="status-pill"><i /> IN DEVELOPMENT</span>
               <h3>Competitive<br />divisions</h3>
@@ -174,7 +176,7 @@ export default function Home() {
                 We&apos;re building towards structured competitive participation, talent recruitment,
                 and the development of dedicated teams. Game titles will be announced as the foundation takes shape.
               </p>
-              <a className="text-link" href="#contact">Register your interest <span>↗</span></a>
+              <a className="text-link" href="#contact">Register your interest <ArrowUpRight aria-hidden="true" /></a>
             </div>
             <span className="division-card__index">BL / 02</span>
           </div>
@@ -192,7 +194,7 @@ export default function Home() {
             {pillars.map((pillar) => (
               <article className="pillar reveal" key={pillar.number}>
                 <span className="pillar__number">{pillar.number}</span>
-                <span className="pillar__icon" aria-hidden="true">+</span>
+                <span className="pillar__icon" aria-hidden="true"><Plus /></span>
                 <h3>{pillar.title}</h3>
                 <p>{pillar.text}</p>
               </article>
@@ -207,8 +209,8 @@ export default function Home() {
             <p>Every ambitious organisation needs the right people and partners behind it.</p>
             <p>BREAKLINE is seeking founding partners who share our ambition to establish a competitive esports organisation and contribute to its development.</p>
             <div className="button-row">
-              <a className="button button--solid" href="#contact">BECOME A FOUNDING PARTNER <span>↗</span></a>
-              <a className="text-link" href="#contact">Explore partnerships <span>↗</span></a>
+              <a className="button button--solid" href="#contact">BECOME A FOUNDING PARTNER <ArrowUpRight aria-hidden="true" /></a>
+              <a className="text-link" href="#contact">Explore partnerships <ArrowUpRight aria-hidden="true" /></a>
             </div>
           </div>
           <div className="partnerships__list reveal">
@@ -236,7 +238,7 @@ export default function Home() {
                 <span className="section-label">{pathway.label}</span>
                 <h3>{pathway.title}</h3>
                 <p>{pathway.text}</p>
-                <a className="text-link" href="mailto:hello@breakline.gg">{pathway.link} <span>↗</span></a>
+                <a className="text-link" href="mailto:hello@breakline.gg">{pathway.link} <ArrowUpRight aria-hidden="true" /></a>
               </article>
             ))}
           </div>
@@ -247,7 +249,7 @@ export default function Home() {
           <SectionLabel>BREAKLINE / THE BEGINNING</SectionLabel>
           <h2>The line<br /><span>starts here.</span></h2>
           <p>An organisation in the making. An ambition without limits. Welcome to BREAKLINE.</p>
-          <a className="button button--solid" href="#contact">FOLLOW THE JOURNEY <span>↗</span></a>
+          <a className="button button--solid" href="#contact">FOLLOW THE JOURNEY <ArrowUpRight aria-hidden="true" /></a>
         </section>
       </main>
 
