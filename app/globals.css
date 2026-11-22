@@ -1752,3 +1752,386 @@ h2 span {
     width: 100%;
   }
 }
+
+/* Contact and outreach */
+.contact-page .section-frame {
+  padding-block: clamp(6rem, 10vw, 9rem);
+}
+.contact-hero {
+  display: grid;
+  min-height: min(46rem, 100svh);
+  align-items: center;
+  padding-top: clamp(8rem, 12vw, 10rem);
+}
+.contact-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 43rem);
+}
+.contact-hero__content h1 {
+  margin: 1.1rem 0 1.5rem;
+  font-family: var(--font-oxanium), var(--font-display);
+  font-size: clamp(5.25rem, 10vw, 9rem);
+  line-height: 0.72;
+}
+.contact-hero__visual {
+  position: absolute;
+  top: 12%;
+  right: -3%;
+  display: grid;
+  width: 50%;
+  height: 76%;
+  place-items: center;
+  opacity: 0.9;
+}
+.contact-hero__visual .brand-mark {
+  box-shadow: 0 0 6rem rgb(242 13 24 / 12%);
+}
+.contact-page .section-heading h2 {
+  font-family: var(--font-oxanium), var(--font-display);
+  font-size: clamp(3.1rem, 6vw, 5.8rem);
+  line-height: 0.84;
+}
+.contact-page .section-heading > p:not(.section-label) {
+  max-width: 36rem;
+  margin-top: 1.75rem;
+  color: var(--steel);
+  line-height: 1.7;
+}
+.channel-grid {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.channel-card {
+  min-height: 20rem;
+  padding: 2rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgb(21 23 27 / 55%);
+}
+.channel-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--steel);
+}
+.channel-card__top svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--red);
+}
+.channel-card h3 {
+  margin-top: 4.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  letter-spacing: 0.03em;
+}
+.channel-card p {
+  max-width: 24rem;
+  margin: 1rem 0 1.75rem;
+  color: var(--steel);
+  line-height: 1.65;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--white);
+  font: 700 0.72rem var(--font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.text-link svg {
+  width: 0.9rem;
+  color: var(--red);
+}
+.contact-form-section {
+  border-top: 1px solid var(--border);
+}
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 55rem;
+  margin-top: 3.5rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid var(--border);
+  background: var(--charcoal);
+}
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+}
+.contact-form label {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+  color: var(--white);
+  font: 700 0.7rem var(--font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #858b963d;
+  border-radius: 0;
+  outline: 0;
+  background: var(--graphite);
+  color: var(--white);
+  font: 0.92rem var(--font-body);
+  text-transform: none;
+  transition: border var(--ease), box-shadow var(--ease), background var(--ease);
+}
+.contact-form input,
+.contact-form select {
+  height: 3.25rem;
+  padding: 0 0.95rem;
+}
+.contact-form textarea {
+  min-height: 9rem;
+  padding: 0.95rem;
+  resize: vertical;
+}
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover {
+  border-color: #858b9688;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgb(242 13 24 / 10%);
+  background: #23262c;
+}
+.contact-form input:required:user-invalid,
+.contact-form select:required:user-invalid,
+.contact-form textarea:required:user-invalid {
+  border-color: var(--deep-red);
+}
+.contact-form__full {
+  grid-column: 1 / -1;
+}
+.contact-form__footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+.social-section {
+  border-top: 1px solid var(--border);
+}
+.social-panel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 42rem;
+  margin-top: 3.5rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(135deg, rgb(242 13 24 / 8%), transparent 55%),
+    var(--charcoal);
+}
+.social-panel > svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--red);
+}
+.social-panel div {
+  display: grid;
+  gap: 0.35rem;
+}
+.social-panel span {
+  color: var(--steel);
+  font: 700 0.65rem var(--font-accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.social-panel strong {
+  font: 700 clamp(1.35rem, 3vw, 2rem) var(--font-display);
+  letter-spacing: 0.03em;
+}
+.social-panel > svg:last-child {
+  color: var(--steel);
+}
+.social-section > .section-disclaimer {
+  margin-top: 1.25rem;
+}
+.destinations {
+  border-top: 1px solid var(--border);
+}
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 4rem;
+  border: 1px solid var(--border);
+}
+.destination-card {
+  min-height: 22rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-right: 1px solid var(--border);
+  background: var(--charcoal);
+}
+.destination-card--accent {
+  border-right: 0;
+  background: linear-gradient(135deg, rgb(184 13 23 / 16%), var(--charcoal) 58%);
+}
+.destination-card h3 {
+  max-width: 18rem;
+  margin-top: 5rem;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1;
+}
+.destination-card p {
+  max-width: 25rem;
+  margin: 1.25rem 0 2rem;
+  color: var(--steel);
+  line-height: 1.65;
+}
+.contact-closing {
+  border-top: 1px solid var(--border);
+  background: radial-gradient(circle at 50% 42%, rgb(242 13 24 / 12%), transparent 32rem);
+}
+.contact-closing h2 {
+  font-family: var(--font-oxanium), var(--font-display);
+  font-size: clamp(4rem, 9vw, 8.5rem);
+  line-height: 0.82;
+}
+.recruitment-placeholder {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.recruitment-placeholder > .brand-mark {
+  margin-bottom: 3rem;
+}
+.recruitment-placeholder h1 {
+  font-family: var(--font-oxanium), var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  line-height: 0.82;
+}
+.recruitment-placeholder h1 span {
+  color: var(--red);
+}
+.recruitment-placeholder > p:not(.section-label) {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  color: var(--steel);
+  line-height: 1.7;
+}
+.recruitment-placeholder .button-row {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .contact-hero {
+    min-height: 42rem;
+  }
+  .contact-hero__visual {
+    right: -38%;
+    width: 78%;
+    opacity: 0.48;
+  }
+  .channel-grid,
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+  .channel-card,
+  .destination-card {
+    min-height: auto;
+  }
+  .destination-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .destination-card:last-child {
+    border-bottom: 0;
+  }
+  .destination-card h3 {
+    margin-top: 3rem;
+  }
+  .contact-form__footer {
+    grid-template-columns: 1fr;
+  }
+  .contact-form__footer .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page .section-frame {
+    padding-block: 5.25rem;
+  }
+  .contact-hero {
+    min-height: 44rem;
+    padding-top: 7.5rem;
+  }
+  .contact-hero__content h1 {
+    font-size: clamp(4.25rem, 18vw, 5.75rem);
+  }
+  .contact-hero__visual {
+    top: 26%;
+    right: -58%;
+    width: 112%;
+    height: 64%;
+  }
+  .contact-page .section-heading h2 {
+    font-size: clamp(2.65rem, 12vw, 4rem);
+  }
+  .channel-grid {
+    margin-top: 3rem;
+  }
+  .channel-card {
+    padding: 1.5rem;
+  }
+  .channel-card h3 {
+    margin-top: 3rem;
+  }
+  .contact-form {
+    margin-top: 3rem;
+    padding: 1.25rem;
+  }
+  .contact-form__grid {
+    grid-template-columns: 1fr;
+  }
+  .social-panel {
+    grid-template-columns: auto 1fr;
+    padding: 1.25rem;
+  }
+  .social-panel > svg:last-child {
+    display: none;
+  }
+  .destination-grid {
+    margin-top: 3rem;
+  }
+  .destination-card {
+    padding: 1.5rem;
+  }
+  .contact-closing h2 {
+    font-size: clamp(2.65rem, 12vw, 4rem);
+  }
+  .recruitment-placeholder {
+    padding-inline: 1.25rem;
+  }
+  .recruitment-placeholder h1 {
+    font-size: clamp(3rem, 14vw, 4.25rem);
+  }
+  .recruitment-placeholder .button-row {
+    width: 100%;
+  }
+  .recruitment-placeholder .button {
+    width: 100%;
+  }
+}
