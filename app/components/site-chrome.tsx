@@ -32,8 +32,8 @@ export function SiteHeader() {
           <Link className={pathname === "/about" ? "is-active" : undefined} href="/about">ABOUT</Link>
           <Link href="/#divisions">DIVISIONS</Link>
           <Link className={pathname === "/partnerships" ? "is-active" : undefined} href="/partnerships">PARTNERS</Link>
-          <Link href="/#contact">CONTACT</Link>
-          <Link className="button button--small button--solid" href="/partnerships#enquiry">GET INVOLVED</Link>
+          <Link className={pathname === "/contact" ? "is-active" : undefined} href="/contact">CONTACT</Link>
+          <Link className="button button--small button--solid" href="/contact">GET INVOLVED</Link>
         </nav>
       </details>
       <nav className="desktop-nav" aria-label="Primary navigation">
@@ -41,8 +41,8 @@ export function SiteHeader() {
         <Link className={pathname === "/about" ? "is-active" : undefined} href="/about">ABOUT</Link>
         <Link href="/#divisions">DIVISIONS</Link>
         <Link className={pathname === "/partnerships" ? "is-active" : undefined} href="/partnerships">PARTNERS</Link>
-        <Link href="/#contact">CONTACT</Link>
-        <Link className="button button--small button--solid" href="/partnerships#enquiry">GET INVOLVED</Link>
+        <Link className={pathname === "/contact" ? "is-active" : undefined} href="/contact">CONTACT</Link>
+        <Link className="button button--small button--solid" href="/contact">GET INVOLVED</Link>
       </nav>
     </header>
   );
@@ -68,7 +68,7 @@ export function SiteFooter() {
         <div>
           <span className="footer-heading">CONNECT</span>
           <Link href="/partnerships">Partnerships</Link>
-          <Link href="/#contact">Get involved</Link>
+          <Link href="/contact">Get involved</Link>
           <a href="mailto:hello@breakline.gg">Enquiries</a>
         </div>
       </div>
