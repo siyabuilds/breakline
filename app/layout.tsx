@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Orbitron, Rajdhani } from "next/font/google";
+import { Inter, Orbitron, Oxanium, Rajdhani } from "next/font/google";
 import "./globals.css";
 
 const rajdhani = Rajdhani({
@@ -23,6 +23,13 @@ const orbitron = Orbitron({
   display: "swap",
 });
 
+const oxanium = Oxanium({
+  variable: "--font-oxanium",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "BREAKLINE ESPORTS — Built to Compete",
   description:
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${rajdhani.variable} ${inter.variable} ${orbitron.variable}`}>
+    <html lang="en" className={`${rajdhani.variable} ${inter.variable} ${orbitron.variable} ${oxanium.variable}`}>
       <body>{children}</body>
     </html>
   );

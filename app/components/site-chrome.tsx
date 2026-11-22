@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Emblem({ small = false }: { small?: boolean }) {
   return (
@@ -12,6 +15,8 @@ export function Emblem({ small = false }: { small?: boolean }) {
 }
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="site-header">
       <Link className="wordmark" href="/" aria-label="BREAKLINE home">
@@ -24,18 +29,18 @@ export function SiteHeader() {
           <span />
         </summary>
         <nav className="mobile-nav" aria-label="Mobile navigation">
-          <Link href="/#about">ABOUT</Link>
+          <Link className={pathname === "/about" ? "is-active" : undefined} href="/about">ABOUT</Link>
           <Link href="/#divisions">DIVISIONS</Link>
-          <Link href="/partnerships">PARTNERS</Link>
+          <Link className={pathname === "/partnerships" ? "is-active" : undefined} href="/partnerships">PARTNERS</Link>
           <Link href="/#contact">CONTACT</Link>
           <Link className="button button--small button--solid" href="/partnerships#enquiry">GET INVOLVED</Link>
         </nav>
       </details>
       <nav className="desktop-nav" aria-label="Primary navigation">
         <Link href="/">HOME</Link>
-        <Link href="/#about">ABOUT</Link>
+        <Link className={pathname === "/about" ? "is-active" : undefined} href="/about">ABOUT</Link>
         <Link href="/#divisions">DIVISIONS</Link>
-        <Link className="is-active" href="/partnerships">PARTNERS</Link>
+        <Link className={pathname === "/partnerships" ? "is-active" : undefined} href="/partnerships">PARTNERS</Link>
         <Link href="/#contact">CONTACT</Link>
         <Link className="button button--small button--solid" href="/partnerships#enquiry">GET INVOLVED</Link>
       </nav>
@@ -56,7 +61,7 @@ export function SiteFooter() {
       <div className="site-footer__links">
         <div>
           <span className="footer-heading">EXPLORE</span>
-          <Link href="/#about">About</Link>
+          <Link href="/about">About</Link>
           <Link href="/#divisions">Competitive</Link>
           <Link href="/#foundation">Foundation</Link>
         </div>
