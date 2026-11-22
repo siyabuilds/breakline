@@ -1,4 +1,5 @@
 import { ArrowUpRight, CircleHelp, Plus } from "lucide-react";
+import { Emblem, SiteFooter, SiteHeader } from "./components/site-chrome";
 
 const principles = [
   {
@@ -62,16 +63,6 @@ const pathways = [
   },
 ];
 
-function Emblem({ small = false }: { small?: boolean }) {
-  return (
-    <span className={`brand-mark${small ? " brand-mark--small" : ""}`} aria-hidden="true">
-      <svg viewBox="0 0 48 48" role="presentation">
-        <path d="M7 8h34L29 20h12L17 40H7l12-16H7l12-16H7Z" />
-      </svg>
-    </span>
-  );
-}
-
 function SectionLabel({ children }: { children: string }) {
   return <p className="section-label">{children}</p>;
 }
@@ -79,33 +70,7 @@ function SectionLabel({ children }: { children: string }) {
 export default function Home() {
   return (
     <div className="site-shell">
-      <header className="site-header">
-        <a className="wordmark" href="#home" aria-label="BREAKLINE home">
-          <Emblem small />
-          <span>BREAKLINE</span>
-        </a>
-        <details className="mobile-menu">
-          <summary aria-label="Toggle navigation menu">
-            <span />
-            <span />
-          </summary>
-          <nav className="mobile-nav" aria-label="Mobile navigation">
-            <a href="#about">ABOUT</a>
-            <a href="#divisions">DIVISIONS</a>
-            <a href="#partnerships">PARTNERS</a>
-            <a href="#contact">CONTACT</a>
-            <a className="button button--small button--solid" href="#contact">GET INVOLVED</a>
-          </nav>
-        </details>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <a className="is-active" href="#home">HOME</a>
-          <a href="#about">ABOUT</a>
-          <a href="#divisions">DIVISIONS</a>
-          <a href="#partnerships">PARTNERS</a>
-          <a href="#contact">CONTACT</a>
-          <a className="button button--small button--solid" href="#contact">GET INVOLVED</a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero section-frame" id="home">
@@ -209,8 +174,8 @@ export default function Home() {
             <p>Every ambitious organisation needs the right people and partners behind it.</p>
             <p>BREAKLINE is seeking founding partners who share our ambition to establish a competitive esports organisation and contribute to its development.</p>
             <div className="button-row">
-              <a className="button button--solid" href="#contact">BECOME A FOUNDING PARTNER <ArrowUpRight aria-hidden="true" /></a>
-              <a className="text-link" href="#contact">Explore partnerships <ArrowUpRight aria-hidden="true" /></a>
+              <a className="button button--solid" href="/partnerships#enquiry">BECOME A FOUNDING PARTNER <ArrowUpRight aria-hidden="true" /></a>
+              <a className="text-link" href="/partnerships">Explore partnerships <ArrowUpRight aria-hidden="true" /></a>
             </div>
           </div>
           <div className="partnerships__list reveal">
@@ -253,17 +218,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="site-footer__brand">
-          <a className="wordmark" href="#home" aria-label="BREAKLINE home"><Emblem small /><span>BREAKLINE</span></a>
-          <p>An emerging esports organisation built around ambition, discipline, and excellence.</p>
-        </div>
-        <div className="site-footer__links">
-          <div><span className="footer-heading">EXPLORE</span><a href="#about">About</a><a href="#divisions">Divisions</a><a href="#foundation">Foundation</a></div>
-          <div><span className="footer-heading">CONNECT</span><a href="#partnerships">Partnerships</a><a href="mailto:hello@breakline.gg">Enquiries</a><a href="mailto:hello@breakline.gg">Recruitment</a></div>
-        </div>
-        <div className="site-footer__bottom"><span>© 2026 BREAKLINE ESPORTS</span><span>BUILT TO COMPETE / DRIVEN TO EXCEL</span></div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
