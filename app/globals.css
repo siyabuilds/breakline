@@ -2035,7 +2035,260 @@ h2 span {
   margin-top: 2rem;
 }
 
+.recruitment-page .section-frame {
+  padding-block: clamp(6rem, 10vw, 9rem);
+}
+.registry-hero {
+  display: grid;
+  min-height: min(46rem, 100svh);
+  align-items: center;
+  padding-top: clamp(8rem, 12vw, 10rem);
+  border-bottom: 1px solid var(--border);
+}
+.registry-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 43rem);
+}
+.registry-hero h1 {
+  max-width: 43rem;
+  margin: 1.1rem 0 1.5rem;
+  font-size: clamp(4.25rem, 8vw, 7.25rem);
+  line-height: 0.78;
+}
+.registry-hero h1 em {
+  color: var(--red);
+  font-style: normal;
+}
+.registry-context {
+  max-width: 38rem;
+  margin-top: 1.25rem;
+  color: var(--steel);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+.registry-hero__visual {
+  top: 12%;
+  right: -3%;
+  width: 50%;
+  height: 76%;
+}
+.registry-hero__visual .brand-mark {
+  box-shadow: 0 0 6rem rgb(242 13 24 / 12%);
+}
+.registry-hero__visual .hero__coordinate {
+  color: var(--muted);
+}
+.recruitment-page .section-heading h2 {
+  font-size: clamp(3.1rem, 6vw, 5.8rem);
+  line-height: 0.84;
+}
+.registry-form-section {
+  border-bottom: 1px solid var(--border);
+}
+.registry-form-section .section-heading > p {
+  max-width: 38rem;
+  margin-top: 1.5rem;
+  color: var(--steel);
+  line-height: 1.7;
+}
+.registry-form {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 55rem;
+  margin-top: 3.5rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid var(--border);
+  background: var(--charcoal);
+}
+.registry-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+}
+.registry-field,
+.registry-fieldset legend {
+  color: var(--white);
+  font: 700 0.7rem var(--font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.registry-field {
+  display: grid;
+  align-content: start;
+  gap: 0.55rem;
+  min-width: 0;
+}
+.registry-field > span,
+.registry-fieldset legend > span {
+  color: var(--red);
+}
+.registry-field--full,
+.registry-fieldset--full {
+  grid-column: 1 / -1;
+}
+.registry-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.registry-fieldset legend {
+  margin-bottom: 1rem;
+  padding: 0;
+}
+.registry-field input,
+.registry-field select,
+.registry-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #858b963d;
+  border-radius: 0;
+  outline: 0;
+  background: var(--graphite);
+  color: var(--white);
+  font: 0.92rem var(--font-body);
+  text-transform: none;
+  transition: border var(--ease), box-shadow var(--ease), background var(--ease);
+}
+.registry-field input,
+.registry-field select {
+  height: 3.25rem;
+  padding: 0 0.95rem;
+}
+.registry-field textarea {
+  min-height: 8.5rem;
+  padding: 0.95rem;
+  resize: vertical;
+}
+.registry-field input::placeholder,
+.registry-field textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.registry-field input:hover,
+.registry-field select:hover,
+.registry-field textarea:hover {
+  border-color: #858b9688;
+}
+.registry-field input:focus,
+.registry-field select:focus,
+.registry-field textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgb(242 13 24 / 10%);
+  background: #23262c;
+}
+.registry-field input:required:user-invalid,
+.registry-field select:required:user-invalid,
+.registry-field textarea:required:user-invalid {
+  border-color: var(--deep-red);
+}
+.registry-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.registry-choice {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.75rem;
+  min-height: 7.5rem;
+  padding: 1.15rem;
+  border: 1px solid #858b9626;
+  background: rgb(32 35 41 / 55%);
+  color: var(--steel);
+  cursor: pointer;
+  transition: border var(--ease), background var(--ease), color var(--ease);
+}
+.registry-choice:hover {
+  border-color: #858b9677;
+  color: var(--white);
+}
+.registry-choice:has(input:checked) {
+  border-color: var(--red);
+  background: rgb(242 13 24 / 7%);
+  color: var(--white);
+}
+.registry-choice input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.12rem 0 0;
+  accent-color: var(--red);
+}
+.registry-choice input:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+.registry-choice span {
+  display: grid;
+  gap: 0.55rem;
+}
+.registry-choice strong {
+  font: 700 0.9rem var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.registry-choice small {
+  color: var(--steel);
+  font: 400 0.78rem/1.55 var(--font-body);
+  text-transform: none;
+}
+.registry-choice-grid--contact {
+  max-width: 31rem;
+}
+.registry-choice--compact {
+  min-height: 3.25rem;
+  align-items: center;
+}
+.registry-helper {
+  max-width: 43rem;
+  margin: -0.25rem 0 1.25rem;
+  color: var(--steel);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+.registry-competitive {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  background: rgb(9 10 13 / 28%);
+}
+.registry-contact-field {
+  max-width: 31rem;
+  margin-top: 1.25rem;
+}
+.registry-guidance {
+  color: var(--steel);
+  font: 400 0.75rem/1.5 var(--font-body);
+  text-transform: none;
+}
+.registry-form__footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 0.25rem;
+}
+
 @media (max-width: 800px) {
+  .registry-hero {
+    min-height: 42rem;
+  }
+  .registry-hero__visual {
+    right: -38%;
+    width: 78%;
+    opacity: 0.48;
+  }
+  .registry-choice-grid,
+  .registry-form__grid {
+    grid-template-columns: 1fr;
+  }
+  .registry-form__footer {
+    grid-template-columns: 1fr;
+  }
+  .registry-form__footer .button {
+    width: 100%;
+  }
   .contact-hero {
     min-height: 42rem;
   }
@@ -2071,6 +2324,39 @@ h2 span {
 }
 
 @media (max-width: 480px) {
+  .recruitment-page .section-frame {
+    padding-block: 5.25rem;
+  }
+  .registry-hero {
+    min-height: 44rem;
+    padding-top: 7.5rem;
+  }
+  .registry-hero h1 {
+    font-size: clamp(3.35rem, 16vw, 4.75rem);
+    line-height: 0.82;
+  }
+  .registry-hero__visual {
+    top: 26%;
+    right: -58%;
+    width: 112%;
+    height: 64%;
+  }
+  .registry-hero__content .hero__description {
+    max-width: 19rem;
+  }
+  .recruitment-page .section-heading h2 {
+    font-size: clamp(2.65rem, 12vw, 4rem);
+  }
+  .registry-form {
+    margin-top: 3rem;
+    padding: 1.25rem;
+  }
+  .registry-choice-grid--contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .registry-choice--compact {
+    padding: 0.85rem;
+  }
   .contact-page .section-frame {
     padding-block: 5.25rem;
   }

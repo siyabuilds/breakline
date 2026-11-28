@@ -153,8 +153,8 @@ export default function ContactPage() {
               <span className="card-number">A / RECRUITMENT</span>
               <h3>Founding Member Recruitment</h3>
               <p>
-                Interested in contributing to the development of BREAKLINE and becoming part of its
-                founding team?
+                Interested in joining the wider BREAKLINE community or being considered for future
+                competitive opportunities?
               </p>
               <Link className="text-link" href="/recruitment">
                 EXPLORE RECRUITMENT <ArrowUpRight aria-hidden="true" />

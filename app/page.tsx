@@ -84,7 +84,7 @@ export default function Home() {
             </p>
             <div className="button-row">
               <a className="button button--solid" href="#about">DISCOVER BREAKLINE <ArrowUpRight aria-hidden="true" /></a>
-              <a className="button button--outline" href="#contact">JOIN THE MOVEMENT</a>
+              <a className="button button--outline" href="/recruitment">JOIN THE MOVEMENT</a>
             </div>
           </div>
           <div className="hero__visual" aria-hidden="true">
@@ -141,7 +141,7 @@ export default function Home() {
                 We&apos;re building towards structured competitive participation, talent recruitment,
                 and the development of dedicated teams. Game titles will be announced as the foundation takes shape.
               </p>
-              <a className="text-link" href="#contact">Register your interest <ArrowUpRight aria-hidden="true" /></a>
+              <a className="text-link" href="/recruitment">Register your interest <ArrowUpRight aria-hidden="true" /></a>
             </div>
             <span className="division-card__index">BL / 02</span>
           </div>
